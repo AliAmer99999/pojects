@@ -1,0 +1,269 @@
+
+:root {
+
+    --main-color: #3d8168;
+    --secondary-color: #1a4031;
+    --main-font: cursive;
+    --secondary-font: system-ui;
+}
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.center-flex {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+
+    background-color: #f3eae3;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.con {
+
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0;
+}
+
+.con .img {
+
+    width: 50%;
+    height: 100%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.con .content {
+
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    padding: 25px;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.con .content .title {
+
+    text-transform: uppercase;
+    font-size: 13px;
+    opacity: .5;
+    font-weight: bold;
+    letter-spacing: 6px;
+    font-family: var(--secondary-font);
+}
+
+.con .content h2 {
+
+    font-family: var(--main-font);
+    font-size: 35px;
+    line-height: 37px;
+    margin: 15px 0;
+}
+
+.con .content .description {
+
+    opacity: .5;
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+.con .content .price {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: var(--main-font);
+    margin: 15px 0 8px;
+}
+
+.con .content .price .new-price {
+
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.con .content .price .old-price {
+
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.con .content .button {
+
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background: var(--main-color);
+    padding: 13px 10px 15px;
+    border-radius: 7px;
+    width: 200px;
+    text-transform: none;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: var(--secondary-font);
+    margin: 0 auto;
+    transition: 0.3s;
+    transition-timing-function: linear;
+}
+
+.con .content .button:hover {
+
+    background-color: var(--secondary-color);
+    transform: scale(1.03) rotate(-1deg);
+}
+
+        /*? The Footer  */
+
+footer {
+
+    margin-top: 140px;
+    height: 7vh;
+    width: 100%;
+    background-color: #000;
+    text-transform: capitalize;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+footer p {
+
+    display: flex;
+    align-items: center;
+}
+
+footer p:nth-of-type(1) a {
+    
+    text-transform: uppercase;
+}
+
+footer p:nth-of-type(2) {
+
+    font-size: 17px;
+    opacity: .8;
+}
+
+footer p:nth-of-type(1) a { 
+
+    transition: .3s;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    font-size: 27px;
+    margin-left: 6px;
+}
+
+footer p:nth-of-type(1) a:hover {
+
+    color: #1bcd23;
+    transform: scale(1.09) rotate(-1deg);
+}
+
+/* 
+!               ============================ Media (Mobile) ============================                                                                                                                   */
+
+    /* Normal Mobiles  */
+
+@media (max-width:650px) {
+
+    .con{
+        width: 300px;
+        min-height: fit-content;
+        margin-bottom: 50%;
+    }
+
+    .con .img {
+        background-image: url(images/image-product-mobile.jpg);
+        width: 100%;
+        height: 200px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0;
+    }
+
+    .con .content {
+        width: fit-content;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+}
+
+    /* Very Small Mobiles  */
+
+@media (max-width:280px) {
+    
+    .con {
+        width: 90%;
+        margin-bottom: 83%;
+    }
+    .con .content {
+        width: 100%;
+        height: 434px;
+        align-content: space-around;
+    }
+    .con .content .title {
+        font-size: 10px;
+    }
+    .con .content h2 {
+        font-size: 25px;
+        line-height: 31px;
+    }
+    .con .content .price .new-price {
+        font-size: 30px;
+    }
+    .con .content .price .old-price {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:470px) {
+
+	footer {    
+        padding: 0 26px 0 8px;
+    }
+	footer p:nth-of-type(1) a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width:360px) {
+
+    footer p:nth-of-type(2) {
+        font-size:10px;
+    }   
+    footer p:nth-of-type(1) a {
+        font-size: 17px;
+    }    
+    footer p:nth-of-type(1) {
+        font-size: 15px;
+    }
+}
